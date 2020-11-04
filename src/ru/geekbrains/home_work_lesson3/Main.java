@@ -1,8 +1,81 @@
 package ru.geekbrains.home_work_lesson3;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
 
+    private static Scanner scanner = new Scanner(System.in);
+
+
     public static void main(String[] args) {
-	// write your code here
+
+        Random random = new Random();
+        int size = random.nextInt(10);
+
+        playGuessNumber(size);
+
     }
+    private static void playGuessNumber ( int number){
+        Random rand = new Random();
+
+        int next = rand.nextInt(10);
+        int score = 0;
+        int restart;
+        do {
+            do {
+
+                System.out.println("Угадайте число от 0 до 9. С трех попыток");
+                score++;
+                int input_number = scanner.nextInt();
+
+                if (input_number == number) {
+                    System.out.println("Вы угадали");
+                    break;
+                } else if (input_number > number) {
+                    System.out.println("Загаданное число меньше");
+                } else {
+                    System.out.println("Загаданное число больше");
+                }
+
+
+            } while (score < 3);
+            System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
+            restart = scanner.nextInt();
+            if (restart == 1) {
+                playGuessNumber(next);
+            }
+        } while (restart == 1 && restart != 0);
+        System.out.println("Использовано попыток: " + score);
+
+    }
+
+
+}
+class guessWords {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Random random = new Random();
+        int d = random.nextInt(25);
+        String word[] = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"};
+        System.out.println("Исходный массив: ");
+        String user_tx = scan.nextLine();
+
+
+        do {
+            for (int i = d; i < word.length; i++) {
+                if (user_tx == word[d]) {
+                    System.out.print("Вы угадали " + word[d]);
+                } else if (user_tx == word[d]) {
+                    System.out.print("Вы угадали " + word[d]);
+                } else {
+                    String str = word[d];
+                    char s = str.charAt(0);
+                    char f = str.charAt(1);
+                    System.out.print(s);
+                    System.out.println(f + "###############");
+                }
+            }
+        } while (user_tx == word[d]);
+    }//не смог сделать цикл
 }
