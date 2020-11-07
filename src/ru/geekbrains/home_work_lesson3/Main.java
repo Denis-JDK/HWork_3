@@ -22,11 +22,15 @@ public class Main {
         int next = rand.nextInt(10);
         int score = 0;
         int restart;
+
+
         do {
             do {
 
                 System.out.println("Угадайте число от 0 до 9. С трех попыток");
                 score++;
+
+
                 int input_number = scanner.nextInt();
 
                 if (input_number == number) {
@@ -49,6 +53,16 @@ public class Main {
         System.out.println("Использовано попыток: " + score);
 
     }
+    /*static void testInt() {
+        Scanner scanner = new Scanner(System.in);
+        do {
+            if (scanner.hasNextInt()) {
+            scanner.nextInt();
+            }
+            System.out.println("Введите целое число");
+            scanner.nextLine();
+        }while (false);
+        }*/
 
 
 }
@@ -58,7 +72,7 @@ class guessWords {
         Random random = new Random();
         int d = random.nextInt(25);
         String word[] = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"};
-        System.out.println("Исходный массив: ");
+        System.out.println("Угадайте загадное слово ");
         String user_tx = scan.nextLine();
 
 
