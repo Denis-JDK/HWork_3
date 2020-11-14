@@ -5,18 +5,32 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Scanner scanner = new Scanner(System.in);
+    /*private static Scanner scanner = new Scanner(System.in);*/
 
 
     public static void main(String[] args) {
+        Cat cat = new Cat("Маня", "Серо-белая", 4, 200,2,4 );
+        Cat cat1 = new Cat("Багира", "Перламутр", 2, 450, 8,2);
+        Dog dog = new Dog("Престиж", "Светлый", 3, 400,10,1 );
+        Dog dog1 = new  Dog("Шарик", "Черный", 4,150,200,2);
 
-        Random random = new Random();
+        dog.move(200, 400);
+        dog1.swig(200,50);
+        dog.jump(200,2);
+        cat.swig(150,5);
+        cat1.jump(50,10);
+        cat.move(200,400);
+    }
+}
+
+        /*Random random = new Random();
         int size = random.nextInt(10);
 
         playGuessNumber(size);
 
     }
-    private static void playGuessNumber ( int number){
+
+    private static void playGuessNumber(int number) {
         Random rand = new Random();
 
         int next = rand.nextInt(10);
@@ -65,8 +79,8 @@ public class Main {
         }*/
 
 
-}
-class guessWords {
+
+    /*class guessWords {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Random random = new Random();
@@ -78,10 +92,9 @@ class guessWords {
 
         do {
             for (int i = d; i < word.length; i++) {
-                if (user_tx == word[d]) {
+                if (user_tx.equals(word[d])) {
                     System.out.print("Вы угадали " + word[d]);
-                } else if (user_tx == word[d]) {
-                    System.out.print("Вы угадали " + word[d]);
+                    break;
                 } else {
                     String str = word[d];
                     char s = str.charAt(0);
@@ -90,6 +103,6 @@ class guessWords {
                     System.out.println(f + "###############");
                 }
             }
-        } while (user_tx == word[d]);
+        } while (true);
     }//не смог сделать цикл
-}
+}*/
