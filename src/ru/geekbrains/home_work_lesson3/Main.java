@@ -14,12 +14,18 @@ public class Main {
         Dog dog = new Dog("Престиж", "Светлый", 3, 400,10,1 );
         Dog dog1 = new  Dog("Шарик", "Черный", 4,150,200,2);
 
-        dog.move(200, 400);
-        dog1.swig(200,50);
-        dog.jump(200,2);
-        cat.swig(150,5);
-        cat1.jump(50,10);
-        cat.move(200,400);
+        boolean a = dog.move(200, 400);
+        System.out.println(a);
+        boolean b = dog1.swig(200,50);
+        System.out.println(b);
+        boolean c = dog.jump(200,2);
+        System.out.println(c);
+        boolean d = cat.swig(150,5);
+        System.out.println(d);
+        boolean r = cat1.jump(50,10);
+        System.out.println(r);
+        boolean s = cat.move(200,400);
+        System.out.println(s);
     }
 }
 
