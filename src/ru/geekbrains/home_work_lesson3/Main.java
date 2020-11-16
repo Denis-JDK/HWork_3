@@ -9,22 +9,22 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Cat cat = new Cat("Маня", "Серо-белая", 4, 200,2,4 );
-        Cat cat1 = new Cat("Багира", "Перламутр", 2, 450, 8,2);
-        Dog dog = new Dog("Престиж", "Светлый", 3, 400,10,1 );
-        Dog dog1 = new  Dog("Шарик", "Черный", 4,150,200,2);
+        Cat cat = new Cat("Маня", "Серо-белая", 4, 200,2,4, 200, 0, 2 );
+        Cat cat1 = new Cat("Багира", "Перламутр", 2, 450, 8,2, 200, 0, 2);
+        Dog dog = new Dog("Престиж", "Светлый", 3, 400,10,1, 500, 10,0.5 );
+        Dog dog1 = new  Dog("Шарик", "Черный", 4,150,200,2,500,10,0.5);
 
-        boolean a = dog.move(200, 400);
+        boolean a = dog.move(200);
         System.out.println(a);
-        boolean b = dog1.swig(200,50);
+        boolean b = dog1.swig(200);
         System.out.println(b);
-        boolean c = dog.jump(200,2);
+        boolean c = dog.jump(0.5);
         System.out.println(c);
-        boolean d = cat.swig(150,5);
+        boolean d = cat.swig(150);
         System.out.println(d);
-        boolean r = cat1.jump(50,10);
+        boolean r = cat1.jump( 50);
         System.out.println(r);
-        boolean s = cat.move(200,400);
+        boolean s = cat.move(200);
         System.out.println(s);
     }
 }

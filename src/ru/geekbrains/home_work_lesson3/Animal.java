@@ -9,10 +9,10 @@ public abstract class Animal {
     protected int swin;
     protected double jum;
     protected int maxrun;
-    protected int maxjump;
+    protected double maxjump;
     protected int maxswin;
 
-    Animal (String name, String color, int age, int dist, int swin, double jum) {
+    Animal (String name, String color, int age, int dist, int swin, double jum, int maxrun, double maxjump, int maxswin) {
         this.name = name;
         this.color = color;
         this.age = age;
@@ -23,10 +23,10 @@ public abstract class Animal {
         this.maxjump = maxjump;
         this.maxswin = maxswin;
     }
-    abstract boolean move(int dist, int maxrun);
+     abstract boolean move(int dist);
 
-    abstract boolean swig(int swin, int maxswin);
+    abstract boolean swig(int swin);
 
-    abstract boolean jump(double jum, int maxjump);
+     abstract boolean jump(double jum);
 
 }
